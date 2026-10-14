@@ -19,7 +19,12 @@ import com.example.service.ResumeAnalysisService;
 
 @RestController
 @RequestMapping("/api/resume")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(
+    origins = {
+        "http://localhost:5173",
+        "https://ai-career-navigator-frontend-24eg107e63.onrender.com"
+    }
+)
 public class ResumeController {
 
     private final ResumeRepository resumeRepository;
